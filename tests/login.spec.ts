@@ -5,6 +5,8 @@ import { config } from '../utils/config';
 
 allureSuite(test, 'Login');
 
+test.skip(config.bluedartPaused, 'Blue Dart automation is paused - onboarding now needs approval. Set RUN_BLUEDART=true to run.');
+
 test.use({ storageState: { cookies: [], origins: [] } });
 
 test('Verify that the vendor can log in with an OTP from the DB and lands on the staff list', async ({ page }) => {

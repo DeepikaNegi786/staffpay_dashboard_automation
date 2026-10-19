@@ -7,6 +7,8 @@ import { buildStaff } from '../utils/testData';
 
 allureSuite(test, 'StaffCreation');
 
+test.skip(config.bluedartPaused, 'Blue Dart automation is paused - onboarding now needs approval. Set RUN_BLUEDART=true to run.');
+
 /**
  * The whole vendor journey in one browser session: log in, pick the branch,
  * add a delivery staff and find them in the list. Runs in the `Staff Creation` project,

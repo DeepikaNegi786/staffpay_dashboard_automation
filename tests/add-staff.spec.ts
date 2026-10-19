@@ -2,9 +2,12 @@ import { test, expect } from '@playwright/test';
 import { StaffListPage } from '../pages/StaffListPage';
 import { AddStaffDialog } from '../pages/AddStaffDialog';
 import { allureSuite } from '../utils/allureSuite';
+import { config } from '../utils/config';
 import { buildStaff } from '../utils/testData';
 
 allureSuite(test, 'AddStaff');
+
+test.skip(config.bluedartPaused, 'Blue Dart automation is paused - onboarding now needs approval. Set RUN_BLUEDART=true to run.');
 
 let staffList: StaffListPage;
 let dialog: AddStaffDialog;

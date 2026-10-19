@@ -6,6 +6,8 @@ import { config } from '../utils/config';
 
 allureSuite(setup, 'Login');
 
+setup.skip(config.bluedartPaused, 'Blue Dart automation is paused - onboarding now needs approval. Set RUN_BLUEDART=true to run.');
+
 /**
  * Logs in once and saves the browser session to a file. Every other test
  * starts from that file, already logged in.
